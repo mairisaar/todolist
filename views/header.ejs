@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>To Do Lists</title>
+
+  <link rel="stylesheet" title= light href="css/styles-neubrutalism.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&family=Kulim+Park:wght@300;400;600;700&family=Nunito:wght@200;400;900;1000&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+
+  <nav role="navigation" class="nav">
+    <ul class="nav-link-group">
+      <li class="nav-link"><a href="/about">about</a></li>
+      <li class="nav-link"><a href="welcome">welcome</a></li></a>
+      <li class="nav-link">
+        <button class="dropdown-button" type="button" aria-haspopup="true" aria-expanded="true" aria-controls="dropdown1">lists <span class="arrow">&dtrif;</span></button>
+        <ul class="dropdown" id="dropdown1">
+          <% existingLists.forEach(function(existingList){ %>
+              <li class="dropdown-item">
+                <a href="/<%= existingList.name %>"><%= existingList.name %></a>
+              </li>
+        <% }); %>
+        </ul>
+      </li>
+      <!-- <li class="nav-link">
+        <button class="dropdown-button" type="button" action="/header" aria-haspopup="true" aria-expanded="true" aria-controls="dropdown2">theme <span class="arrow">&dtrif;</span></button>
+        <ul class="dropdown" id="dropdown2">
+          <li class="dropdown-item">neumorphism light</li>
+          <li class="dropdown-item">neumorphism dark</li>
+          <li class="dropdown-item">gradient</li>
+          <li class="dropdown-item">neubrutalism</li>
+      </li> -->
+    </ul>
+
+  </nav>
