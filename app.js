@@ -58,9 +58,15 @@ app.get("/", function(req, res){
   });
 });
 
-// app.get("/about", function(req, res){
-//   res.render("about");
-// });
+app.get("/about", function(req, res){
+  List.find({}, function(err, foundList){
+    if(err){
+      console.log(err);
+    }else{
+      res.render("about", {existingLists: foundList});
+    }
+  });
+});
 
 app.get("/welcome", function(req, res){
 
