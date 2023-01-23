@@ -11,6 +11,7 @@ app.use(express.static(__dirname + "/public"));
 // mongoose.connect('mongodb://127.0.0.1:27017/todolistDB');
 mongoose.connect('mongodb+srv://admin-mairi:admin-user-pw-123@cluster0.cpzzi9s.mongodb.net/todolistDB')
 
+
 //Item
 const itemsSchema = new mongoose.Schema({
   name: String
@@ -23,6 +24,7 @@ const item2 = new Item({name: "Hit the + button to add a new item."});
 const item3 = new Item({name: "<-- Hit this to delete an item."});
 
 const defaultItems = [item1, item2, item3];
+
 
 //List
 const listSchema = new mongoose.Schema({
