@@ -4,7 +4,8 @@
   "description": "A To Do List Application",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build"
   },
   "author": "Mairi Saar",
   "license": "ISC",
